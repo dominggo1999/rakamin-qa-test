@@ -15,11 +15,14 @@
     "pre-test": "rm -rf ./mochawesome-report"
   },
   "devDependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@types/cypress-cucumber-preprocessor": "^4.0.1",
     "@types/eslint": "^8.37.0",
-    "@types/node": "^18.16.2",
+    "@types/node": "^18.16.3",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
     "cypress": "^12.11.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-mochawesome-reporter": "^3.4.0",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
@@ -38,5 +41,9 @@
   },
   "dependencies": {
     "short-uuid": "^4.2.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/"
   }
 }
