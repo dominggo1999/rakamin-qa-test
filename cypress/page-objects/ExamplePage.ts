@@ -1,9 +1,11 @@
-class DashboardPage {
-  readonly url: string = "/dashboard/index";
+class Example {
+  readonly url: string = "/pageUrl";
+
+  elements = {};
 
   visit() {
-    cy.visit(this.url);
+    cy.get(this.url);
   }
 }
 
-export default new DashboardPage();
+export default new Example();

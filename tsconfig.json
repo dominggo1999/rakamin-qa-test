@@ -1,23 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
-    "moduleResolution": "Node",
-    "strict": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
+    "target": "es5",
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node"],
+    "typeRoots": ["./cypress/support/commands.ts"],
+    "baseUrl": "cypress",
     "paths": {
-      "config/*": ["cypress/config/*"],
-      "page-objects/*": ["cypress/page-objects/*"],
-      "section-objects/*": ["cypress/section-objects/*"]
+      "config/*": ["./cypress/config/*"],
+      "page-objects/*": ["./cypress/page-objects/*"],
+      "section-objects/*": ["./cypress/section-objects/*"]
     }
   },
   "include": ["**/*.ts", "**/*.cy.ts", "**/*.spec.ts"]
