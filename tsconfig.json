@@ -7,7 +7,6 @@
     "moduleResolution": "Node",
     "strict": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
     "noEmit": true,
     "noUnusedLocals": true,
@@ -21,5 +20,5 @@
       "section-objects/*": ["cypress/section-objects/*"]
     }
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "**/*.cy.ts", "**/*.spec.ts"]
 }
