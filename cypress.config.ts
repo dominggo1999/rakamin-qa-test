@@ -15,7 +15,7 @@ export default defineConfig({
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       require("cypress-mochawesome-reporter/plugin")(on);
     },
-    baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php",
+    baseUrl: "https://web-staging.rakamin.com",
   },
   video: false,
   screenshotOnRunFailure: false,
