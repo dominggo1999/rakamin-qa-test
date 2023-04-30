@@ -68,9 +68,10 @@ jobs:
           command: pnpm run test:${{ matrix.browser }}
         env:
           # Change this value according to what you need
-          CYPRESS_LOGIN_EMAIL: ${{ secrets.CYPRESS_LOGIN_EMAIL }}
-          CYPRESS_LOGIN_PASSWORD: ${{ secrets.CYPRESS_LOGIN_PASSWORD }}
-          CYPRESS_LOGIN_NAME: ${{ secrets.CYPRESS_LOGIN_NAME }}
+          CYPRESS_AUTHENTICATED_LOGIN_EMAIL: ${{ secrets.CYPRESS_AUTHENTICATED_LOGIN_EMAIL }}
+          CYPRESS_AUTHENTICATED_LOGIN_PASSWORD_: ${{ secrets.CYPRESS_AUTHENTICATED_LOGIN_PASSWORD_ }}
+          CYPRESS_UNAUTHENTICATED_LOGIN_EMAIL: ${{ secrets.CYPRESS_UNAUTHENTICATED_LOGIN_EMAIL }}
+          CYPRESS_UNAUTHENTICATED_LOGIN_PASSWORD_: ${{ secrets.CYPRESS_UNAUTHENTICATED_LOGIN_PASSWORD_ }}
 
       - uses: actions/upload-artifact@v3
         with:

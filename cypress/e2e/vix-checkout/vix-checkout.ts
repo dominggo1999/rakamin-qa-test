@@ -15,7 +15,10 @@ import {
 
 // Scenario 1
 Before(() => {
-  cy.login();
+  cy.loginWith({
+    email: Cypress.env("CYPRESS_AUTHENTICATED_LOGIN_EMAIL"),
+    password: Cypress.env("CYPRESS_AUTHENTICATED_LOGIN_PASSWORD_"),
+  });
   cy.wait(2000);
 });
 
@@ -85,7 +88,10 @@ Then("User redirected to login page", () => {
 
 When("User fill login credential and submit", () => {
   // TODO : make different credentials for this one, since we only have 1 free quota for vix registration
-  cy.login();
+  cy.loginWith({
+    email: Cypress.env("CYPRESS_UNAUTHENTICATED_LOGIN_EMAIL"),
+    password: Cypress.env("CYPRESS_UNAUTHENTICATED_LOGIN_PASSWORD_"),
+  });
 });
 
 Then("The system redirects user to VIX detail page", () => {

@@ -12,15 +12,6 @@ Cypress.Commands.add("assertUrlEquals", (path) => {
   cy.url().should("equal", `${baseUrl}${path}`);
 });
 
-Cypress.Commands.add("login", () => {
-  LoginPage.visit();
-  LoginPage.fillLoginCredentials({
-    email: Cypress.env("CYPRESS_LOGIN_EMAIL"),
-    password: Cypress.env("CYPRESS_LOGIN_PASSWORD"),
-  });
-  LoginPage.submitLoginCredentials();
-});
-
 Cypress.Commands.add("loginWith", ({ email, password }) => {
   LoginPage.visit();
   LoginPage.fillLoginCredentials({
@@ -36,7 +27,6 @@ declare global {
     interface Chainable {
       getByDataCy(value: string): Chainable<JQuery<HTMLElement>>;
       assertUrlEquals(path: string): void;
-      login(): void;
       loginWith(credentials: LoginCredentials): void;
     }
   }
