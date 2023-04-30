@@ -20,6 +20,8 @@ This project was created to complete the QA Engineer Test at Rakamin Academy. Th
    - **Edge:** `pnpm run test:edge`
 6. Running the tests using the commands in step number 5 will generate reports that can be found in the `/mochawesome-report` folder. You can open the `index.html` file to view the report, or you can run `pnpm run open-report` to open the `index.html` file in your default browser.
 
+****If you want to add new env variables, make sure they have "CYPRESS_" prefix***
+
 ## Running the Test in Github Actions
 
 1. If you are not familiar with Github, you can learn more about it [here](https://docs.github.com/en/get-started/quickstart/hello-world).
@@ -29,6 +31,8 @@ This project was created to complete the QA Engineer Test at Rakamin Academy. Th
 5. The GitHub actions for this repository are only triggered manually, so go to the Actions tab and trigger the "CI" action.
 6. After the test finishes, you will find three different files that correspond to the three different browsers at the very bottom of the CI workflow details. You can read about how the file is being uploaded [here](https://github.com/actions/upload-artifact).
 7. You can download those reports and open them on your local machine.
+
+****If you want to add new env variables, make sure they have "CYPRESS_" prefix***
 
 ## Tech Stack
 
