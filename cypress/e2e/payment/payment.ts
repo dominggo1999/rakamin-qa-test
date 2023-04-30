@@ -10,4 +10,5 @@ Then("I should see a search bar", () => {
     "placeholder",
     "Search the web without being tracked",
   );
+  expect(true).to.be.false;
 });

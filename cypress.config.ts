@@ -11,6 +11,8 @@ export default defineConfig({
     charts: true,
     reportDir: "mochawesome-report",
     saveJson: true,
+    embeddedScreenshots: true,
+    inlineAssets: true,
   },
   e2e: {
     specPattern: "**/*.feature",
@@ -32,5 +34,5 @@ export default defineConfig({
     baseUrl: "https://web-staging.rakamin.com",
   },
   video: false,
-  screenshotOnRunFailure: false,
+  screenshotOnRunFailure: true,
 });
