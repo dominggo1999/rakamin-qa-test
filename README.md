@@ -29,7 +29,7 @@ This project was created to complete the QA Engineer Test at Rakamin Academy. Th
 3. Fork this repository.
 4. After that, you need to add the environment variables to Github secrets.
 5. The GitHub actions for this repository are only triggered manually, so go to the Actions tab and trigger the "CI" action.
-6. After the test finishes, you will find three different files that correspond to the three different browsers at the very bottom of the CI workflow details. You can read about how the file is being uploaded [here](https://github.com/actions/upload-artifact).
+6. After the test finishes, you will find three different files that correspond to the three different browsers at the very bottom of the CI workflow details. You can read about how the file is being uploaded [here](https://github.com/actions/upload-artifact). Or you can go to the very bottom of [this page](https://github.com/dominggo1999/rakamin-qa-test/actions/runs/4843432061) to see the examples.
 7. You can download those reports and open them on your local machine.
 
 ****If you want to add new env variables, make sure they have "CYPRESS_" prefix***
