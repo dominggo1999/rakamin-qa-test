@@ -7,17 +7,17 @@ This project was created to complete the QA Engineer Test at Rakamin Academy. Th
 1. Clone this repository with `git clone git@github.com:dominggo1999/rakamin-qa-test.git`.
 2. Run `pnpm install` to install all the dependencies.
 3. Before starting the Cypress launcher, make sure to complete the following prerequisites:
-    - Create a `.env` file and copy the content from `.env.example` to that file.
-    - Create two new accounts and make sure the resume is filled and the account is verified.
-    - Change the values of env variables inside `.env` to the values of those two new accounts.
+   - Create a `.env` file and copy the content from `.env.example` to that file.
+   - Create two new accounts and make sure the resume is filled and the account is verified.
+   - Change the values of env variables inside `.env` to the values of those two new accounts.
 4. Launch the Cypress test launcher (with GUI) on different browsers:
-    - **Chrome:** `pnpm run cy:open:chrome`
-    - **Firefox:** `pnpm run cy:open:firefox`
-    - **Edge:** `pnpm run cy:open:edge`   
+   - **Chrome:** `pnpm run cy:open:chrome`
+   - **Firefox:** `pnpm run cy:open:firefox`
+   - **Edge:** `pnpm run cy:open:edge`
 5. You can also run the tests using headless browsers:
-    - **Chrome:** `pnpm run test:chrome`
-    - **Firefox:** `pnpm run test:firefox`   
-    - **Edge:** `pnpm run test:edge`   
+   - **Chrome:** `pnpm run test:chrome`
+   - **Firefox:** `pnpm run test:firefox`
+   - **Edge:** `pnpm run test:edge`
 6. Running the tests using the commands in step number 5 will generate reports that can be found in the `/mochawesome-report` folder. You can open the `index.html` file to view the report, or you can run `pnpm run open-report` to open the `index.html` file in your default browser.
 
 ## Running the Test in Github Actions
@@ -32,8 +32,9 @@ This project was created to complete the QA Engineer Test at Rakamin Academy. Th
 
 ## Tech Stack
 
-This project was created following the Cypress get started guide. But instead of just using pure JavaScript, this project uses TypeScript. The project also uses the following plugins/packages:
-- [@cypress/webpack-preprocessor](https://github.com/cypress-io/cypress-webpack-preprocessor) for customizing the webpack config 
+This project was created following the Cypress get started guide. But instead of just using pure JavaScript, this project uses TypeScript. This project use the [POM pattern](https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/) to construct the test steps. The project also uses the following plugins/packages:
+
+- [@cypress/webpack-preprocessor](https://github.com/cypress-io/cypress-webpack-preprocessor) for customizing the webpack config
 - [@testing-library/cypress](https://testing-library.com/docs/cypress-testing-library/intro/)
 - [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor) for writing the test features in Gherkin Syntax
 - [esbuild-loader](https://github.com/esbuild-kit/esbuild-loader) to make webpack faster
