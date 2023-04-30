@@ -25,4 +25,4 @@ dist-ssr
 
 cypress/downloads
 mochawesome-report
-cypress/sreenshots
+cypress/screenshots
