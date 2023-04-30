@@ -17,7 +17,7 @@ import {
 Before(() => {
   cy.loginWith({
     email: Cypress.env("CYPRESS_AUTHENTICATED_LOGIN_EMAIL"),
-    password: Cypress.env("CYPRESS_AUTHENTICATED_LOGIN_PASSWORD_"),
+    password: Cypress.env("CYPRESS_AUTHENTICATED_LOGIN_PASSWORD"),
   });
   cy.wait(2000);
 });
@@ -90,7 +90,7 @@ When("User fill login credential and submit", () => {
   // TODO : make different credentials for this one, since we only have 1 free quota for vix registration
   cy.loginWith({
     email: Cypress.env("CYPRESS_UNAUTHENTICATED_LOGIN_EMAIL"),
-    password: Cypress.env("CYPRESS_UNAUTHENTICATED_LOGIN_PASSWORD_"),
+    password: Cypress.env("CYPRESS_UNAUTHENTICATED_LOGIN_PASSWORD"),
   });
 });
 
