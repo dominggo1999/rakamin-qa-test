@@ -39,20 +39,6 @@ export default defineConfig({
 
       require("cypress-mochawesome-reporter/plugin")(on);
 
-      // const options: browserify.Options = {
-      //   // eslint-disable-next-line @typescript-eslint/no-var-requires
-      //   ...require("@cypress/browserify-preprocessor").defaultOptions,
-      //   paths: [
-      //     // the process.cwd() depends on the cypress process being started from
-      //     // the project root. You can also use an absolute path here.
-      //     resolve(`${process.cwd()}/cypress`),
-      //     // Include any other path you want to access from cypress here
-      //   ],
-      //   typescript: require.resolve("typescript"),
-      // };
-
-      // on("file:preprocessor", cucumberPreprocessor(options));
-
       on(
         "file:preprocessor",
         require("@cypress/webpack-preprocessor")({
