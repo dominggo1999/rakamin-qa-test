@@ -3,6 +3,8 @@ class CoursePage {
 
   elements = {
     firstVacancyCard: () => cy.getByDataCy("vix-card-1"),
+    firstVacancyLink: () =>
+      this.elements.firstVacancyCard().get("a.vacancy-card-link"),
   };
 
   visit() {

@@ -1,6 +1,21 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import { defineConfig } from "cypress";
 
+require("dotenv").config();
+
+const filterEnvVariables = (
+  allowedPrefixes: string[],
+): Record<string, string> => {
+  const filteredEnv: Record<string, string> = {};
+  for (const [key, value] of Object.entries(process.env)) {
+    if (allowedPrefixes.some((prefix) => key.startsWith(prefix))) {
+      filteredEnv[key] = value;
+    }
+  }
+
+  return filteredEnv;
+};
+
 export default defineConfig({
   reporter: "cypress-mochawesome-reporter",
   reporterOptions: {
@@ -16,6 +31,12 @@ export default defineConfig({
   e2e: {
     specPattern: "**/*.feature",
     setupNodeEvents(on, config) {
+      // copy any needed variables from process.env to config.env
+      config.env = {
+        ...config.env,
+        ...filterEnvVariables(["CYPRESS_"]),
+      };
+
       require("cypress-mochawesome-reporter/plugin")(on);
 
       // const options: browserify.Options = {
