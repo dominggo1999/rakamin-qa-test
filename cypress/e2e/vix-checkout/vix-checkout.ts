@@ -50,7 +50,7 @@ Then("The system redirect the user to checkout page", () => {
 });
 
 And("User choose  VIP Access", () => {
-  VixCheckoutPage.elements.VIPAccessCheckBox().click();
+  VixCheckoutPage.elements.continueToPaymentButton().click();
 });
 
 Then("The system redirect to payment page", () => {
@@ -110,7 +110,7 @@ And("User continue to checkout following Scenario#1", () => {
 
   cy.assertUrlEquals(VixCheckoutPage.url);
 
-  VixCheckoutPage.elements.VIPAccessCheckBox().click();
+  VixCheckoutPage.elements.continueToPaymentButton().click();
 
   cy.assertUrlEquals("/thank-you-page/virtual-internship-experience");
 });
